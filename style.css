@@ -1,0 +1,195 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  width: 20%; /* Sidebar is 24% of the width */
+  background-color: #0059FF; /* Background color */
+  color: white; /* Font color */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: none; /* Remove the border-right */
+}
+
+.main-content {
+  width: 76%; /* Main content is 76% of the width */
+  padding-left: 25px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 700;
+}
+
+.profile-photo {
+  width: 260px; /* Adjusted size */
+  height: 260px;
+  border-radius: 60%;
+  object-fit: cover;
+  border: 3px solid #ddd; /* Border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 10px; /* Space between the name and the photo */
+}
+
+h2 {
+  color: #34495e;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.sidebar h2 {
+  font-size: 13px; /* Smaller font size */
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: white;
+}
+
+.sidebar a,
+.sidebar p {
+  font-size: 13px; /* Smaller font size */
+  color: white;
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  color: #ffdd59; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #ffcc00; /* Hover effect */
+}
+
+p.job-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0059FF;
+}
+
+p.job-duration {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+}
+
+p.page-visit {
+  font-style: italic;
+  color: white;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 3px;
+  color: #4d4d4d;
+}
+
+/* Language Skills Bars */
+.language-skills {
+  margin-top: 10px;
+}
+
+.language {
+  margin-bottom: 10px;
+}
+
+.language span {
+  display: block;
+  font-size: 13px;
+  color: #ffdd59;
+  margin-bottom: 3px;
+}
+
+.language-bar {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.language-bar .bar {
+  height: 100%;
+  background: #ffcc00;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .sidebar,
+  .main-content {
+      width: 100%;
+      padding: 0;
+  }
+
+  .sidebar {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+      padding-left: 0;
+  }
+
+  .profile-photo {
+      width: 140px; /* Adjust for smaller screens */
+      height: 140px;
+  }
+}
