@@ -25,7 +25,7 @@ body {
 
 .sidebar {
   width: 20%; /* Sidebar is 24% of the width */
-  background-color: #0059FF; /* Background color */
+  background-color: #48CCCD; /* Background color */
   color: white; /* Font color */
   display: flex;
   flex-direction: column;
@@ -110,8 +110,8 @@ h3 {
 
 p.job-title {
   font-size: 20px;
-  font-weight: 500;
-  color: #0059FF;
+  font-weight: 600;
+  color: #48CCCD;
 }
 
 p.job-duration {
