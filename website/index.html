@@ -186,17 +186,9 @@
                 <p class="page-visit">Page Visits: <span id="visit-count">0</span></p>
             </div>
         </div>
+        <div class="counter-number"></div>
     </div>
-
-	<script>
-        // Page visit counter
-        if (localStorage.getItem('visitCount')) {
-            localStorage.setItem('visitCount', Number(localStorage.getItem('visitCount')) + 1);
-        } else {
-            localStorage.setItem('visitCount', 1);
-        }
-        document.getElementById('visit-count').textContent = localStorage.getItem('visitCount');
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
