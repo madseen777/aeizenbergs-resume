@@ -1,235 +1,245 @@
-/* Global Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.2;
-  margin: 0;
-  padding: 20px;
-  background-color: #f0f2f5;
-  color: #333;
-}
 
-.container {
-  display: flex;
-  max-width: 1000px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: whitesmoke;
 }
-
-.container:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+a{
+    text-decoration: none;
+    color: black;
 }
-
-.sidebar {
-  width: 20%; /* Sidebar is 24% of the width */
-  background-color: #48CCCD; /* Background color */
-  color: white; /* Font color */
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-right: none; /* Remove the border-right */
+hr{
+    background: grey;
 }
-
-.main-content {
-  width: 76%; /* Main content is 76% of the width */
-  padding-left: 25px;
-  position: relative;
+#container{
+    position: relative;
+    display: flex;
 }
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+#profile{
+    flex: 15%;
+    display: block;
+    position: relative;
+    margin: 5% 2% 0 10%;
+    width: 100%;
+    height: 100%;
 }
-
-.header h1 {
-  font-size: 32px;
-  color: #2c3e50;
-  margin: 0;
-  font-weight: 700;
+#info-cards{
+    flex: 55%;
+    display: block;
+    margin-top: 5%;
+    margin-right: 10%;
+    width: 100%;
+    height: 100%;
 }
-
-.profile-photo {
-  width: 260px; /* Adjusted size */
-  height: 260px;
-  border-radius: 60%;
-  object-fit: cover;
-  border: 3px solid #ddd; /* Border color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 10px; /* Space between the name and the photo */
+#image{
+    position: relative;
+    overflow: hidden;
 }
-
-h2 {
-  color: #34495e;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
+#image,#profile-photo{
+    position: relative;
+    width: 280px;
+    height: 260px;
+    border-radius: 10px;
 }
-
-h3 {
-  font-size: 20px;
-  color: #2c3e50;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
+#aws-icon{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
-
+#image > a{
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5) !important;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+#image > a > i{
+    -webkit-text-stroke: 1px #ffffffdd;
+    padding: 40%;
+}
+#image:hover a{
+    display: block;
+}
+#name{
+    font-size: 23px !important;
+    line-height: 20px !important;
+}
+#about, #language-skills,#top-skills,.card > ul > li{
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+#about,#language-skills,#top-skills{
+    font-size: 20px !important;
+    padding: 0 !important;
+}
+#name, #about, #language-skills, #top-skills p{
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Language Skills Bars */
+.language-skills {
+    margin-top: 10px;
+  }
+.language {
+    margin-bottom: 10px;
+  }
+.language span {
+    display: block;
+    font-size: 13px;
+    color: #535353;
+    margin-bottom: 3px;
+  }
+.language-bar {
+    background: rgba(204, 33, 33, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+  }
+.language-bar .bar {
+    height: 100%;
+    background: #2d903e;
+    border-radius: 5px;
+  }
+#email{
+    font-size: 15px !important;
+    font-weight: bold !important;
+    font-family: 'Cutive Mono',monospace;
+}
+#email,#education,#designation,#telephone, #tools{
+    color: #555;
+    font-size: 13.5px;
+}
+#job {
+    color: #555;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+}
+strong,span{
+    color: black;
+    font-size: 16px;
+}
+#edit-intro{
+    display: block;
+    color:#097bbf;
+    font-family: 'Nunito', sans-serif;
+}
+.fab{
+    font-size: 1.1em;
+}
+.fab,.fas{
+    color: whitesmoke;
+}
 .section {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
-.sidebar h2 {
-  font-size: 13px; /* Smaller font size */
-  margin-bottom: 8px;
-  font-weight: 700;
-  color: white;
+.edit{
+    top: 19px;
+    right: 10px;
 }
-
-.sidebar a,
-.sidebar p {
-  font-size: 13px; /* Smaller font size */
-  color: white;
-  margin-bottom: 8px;
+/* #about > a, .edit{
+    position: absolute;
+    font-size: 15px !important;
+} */
+.stroke-transparent {
+ -webkit-text-stroke: 1px #000;
+ -webkit-text-fill-color: transparent;
 }
-
-.sidebar a {
-  color: #ffdd59; /* Link color */
-  text-decoration: none;
-  transition: color 0.3s ease;
+.stroke-transparent-blue {
+ -webkit-text-stroke: 1px #097bbf;
+ -webkit-text-fill-color: transparent;
 }
-
-.sidebar a:hover {
-  color: #ffcc00; /* Hover effect */
+.card{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+    overflow-x: hidden;
+    margin-bottom: 30px;
+    padding: 15px 30px 30px 30px;
+    background-color: #fff;
+}
+.card > p{
+    color: #0e141e;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 2;
+}
+.card > p > i{
+    font-size: 18px;
+}
+.card > a{
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+    margin-left: 25px;
+    padding: 0;
+    border: 0;
+    height: auto;
+    background: transparent;
+    color: #097bbf;
+    outline: none;
+    cursor: pointer;
+}
+.card > ul{
+    list-style-type: none;
+}
+.tags{
+    font-size: 17px;
+    font-weight: bolder;
+}
+.tags ~ a{
+    display: none !important;
+}
+.tags span{
+    font-size: 14px;
+    font-weight: normal;
+    color: #0e141e;
+}
+.tags span span{
+    color: #738f93;
+}
+@media screen and (max-width:1090px){
+    #profile{
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width:850px){
+    #container{
+        display: block;
+    }
+    #profile{
+        width: 90%;
+    }
+    .card{
+        margin: 0 5%;
+        margin-bottom: 30px;
+    }
+    p.job-title {
+        font-size: 16px;
+    }
+    p.job-duration {
+        font-size: 14px;
+    }
 }
 
 p.job-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #48CCCD;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 p.job-duration {
-  font-style: italic;
-  color: #7f8c8d;
-  margin-bottom: 12px;
+    font-size: 14px;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 12px;
 }
 
-p.page-visit {
-  font-style: italic;
-  color: white;
-}
-
-ul {
-  list-style-type: square;
-  padding-left: 25px;
-  margin-top: 10px;
-}
-
-ul li {
-  margin-bottom: 3px;
-  color: #4d4d4d;
-}
-
-/* Language Skills Bars */
-.language-skills {
-  margin-top: 10px;
-}
-
-.language {
-  margin-bottom: 10px;
-}
-
-.language span {
-  display: block;
-  font-size: 13px;
-  color: #ffdd59;
-  margin-bottom: 3px;
-}
-
-.language-bar {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  overflow: hidden;
-  height: 8px;
-}
-
-.language-bar .bar {
-  height: 100%;
-  background: #ffcc00;
-  border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-      padding: 15px;
-  }
-
-  .sidebar {
-      width: 100%;
-      padding: 10px;
-      border-right: none;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 20px;
-  }
-
-  .main-content {
-      width: 100%;
-      padding: 10px;
-  }
-
-  .header {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .header img.profile-photo {
-      width: 120px;
-      height: 120px;
-      margin: 15px 0 0 0;
-  }
-
-  h2, h3 {
-      font-size: 18px;
-  }
-
-  p.job-title {
-      font-size: 16px;
-  }
-
-  p.job-duration {
-      font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-      padding: 10px;
-  }
-
-  .container {
-      padding: 10px;
-  }
-
-  .header h1 {
-      font-size: 24px;
-  }
-
-  .header img.profile-photo {
-      width: 100px;
-      height: 100px;
-  }
-
-  h2 {
-      font-size: 16px;
-  }
-
-  h3 {
-      font-size: 14px;
-  }
+h3.workplace {
+    font-size: 30px;
+    color: #2d903e;
+    margin-bottom: 12px;
 }
